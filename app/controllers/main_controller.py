@@ -34,7 +34,7 @@ def scrape():
         
         # Use a API do Gemini para gerar uma resposta
         model = genai.GenerativeModel('gemini-1.5-flash')
-        result = model.generate_content(f"Resuma o texto em no máx 70 palavras:\n\n{page_content}")
+        result = model.generate_content(f"Resuma o texto em no máx 100 palavras, não passe disso:\n\n{page_content}")
         
         summary = result.text.strip()
         
