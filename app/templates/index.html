@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Scraper</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Web Scraper</h1>
+    
+    <form action="{{ url_for('main_controller.scrape') }}" method="post">
+        <label for="url">Digite a URL do site:</label>
+        <input type="text" id="url" name="url" required>
+        <button type="submit">Raspar</button>
+    </form>
+    
+    {% if page_content %}
+        <h2>Conteúdo dos Parágrafos:</h2>
+        <pre>{{ page_content }}</pre>
+    {% endif %}
+    
+    {% if summary %}
+        <h2>Resumo (máximo de 30 palavras):</h2>
+        <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
