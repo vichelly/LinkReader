@@ -1,14 +1,157 @@
 /* static/style.css */
 
+/* Cores */
+:root {
+    --primary-color: #1c1c1c;
+    --secondary-color: #2c2c2c;
+    --accent-color: #d1d1d1;
+}
+
+/* Estilos Gerais */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 1100px;
+}
+
+/* Cabeçalho */
+header {
+    padding: 40px;
+    text-align: center;
 }
 
 h1 {
-    color: #333;
+    margin: 0;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #b0b0b0;
+}
+
+/* Seção do Formulário */
+.form-section {
+    padding: 40px;
+    text-align: center;
 }
 
 form {
-    margin-bottom: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+button[type="submit"] {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Seção do Resultado */
+.result-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.loading {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.result-div{
+ color: var(--accent-color);
+ background-color: var(--secondary-color);
+ padding: 8px;
+ border-radius: 5px;
+}
+
+h2{
+    color: var(--accent-color);
+    font-weight: 300;
+}
+
+#urlForm{
+    padding: 30px;
+}
+
+/* Media Query para Dispositivos Móveis */
+@media (max-width: 767px) {
+    header {
+        padding: 20px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+    .result-section {
+        padding: 20px;
+    }
+    
+    #urlForm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
