@@ -1,4 +1,9 @@
 {
-    "source": "/feedback/:id",
-    "destination": "/api/feedback/:id"
+    "rewrites": [
+      {
+        "source": "/feedback/:id",
+        "destination": "/api/feedback/:id"
+      }
+    ]
   }
+  
