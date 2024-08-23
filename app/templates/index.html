@@ -8,32 +8,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <header>
+    <header>
+        <div class="wrapper">
             <h1>Link Reader</h1>
             <p class="description">Insira uma URL e obtenha um resumo do conteúdo em poucos segundos.</p>
             <hr>
-        </header>
-        <section class="form-section">
-            <form id="urlForm" action="{{ url_for('main_controller.scrape') }}" method="post" onsubmit="showLoading()">
-                <label for="url">Digite a URL do site:</label>
-                <input type="text" id="url" name="url" required>
-                <button type="submit">Resumir</button>
-            </form>
-            <div id="loading" class="loading" style="display: none;">
-                Carregando...
-            </div>
-        </section>
-        
-        {% if summary %}
-        <section class="result-section">
-            <div class="result-div">
-                <h2>Resumo:</h2>
-                <p>{{ summary }}</p>
-            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <section class="form-section">
+                <form id="urlForm" action="{{ url_for('main_controller.scrape') }}" method="post" onsubmit="showLoading()">
+                    <label for="url">Digite a URL do site:</label>
+                    <input type="text" id="url" name="url" required>
+                    <button type="submit">Resumir</button>
+                </form>
+                <div id="loading" class="loading" style="display: none;">
+                    Carregando...
+                </div>
+            </section>
             
-        </section>
-        {% endif %}
+            {% if summary %}
+            <section class="result-section">
+                <div class="result-div">
+                    <h2>Resumo:</h2>
+                    <p>{{ summary }}</p>
+                </div>
+                
+            </section>
+            {% endif %}
+        </div>
     </main>
 
     <script>

@@ -20,7 +20,7 @@ body {
     align-items: center;
 }
 
-main{
+.wrapper{
     width: 1100px;
 }
 
@@ -117,7 +117,7 @@ h2{
 
 /* Media Query para Dispositivos Móveis */
 @media (max-width: 767px) {
-    main{
+    .wrapper{
         width: 100%;
     }
     header {
