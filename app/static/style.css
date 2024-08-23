@@ -117,6 +117,9 @@ h2{
 
 /* Media Query para Dispositivos Móveis */
 @media (max-width: 767px) {
+    main{
+        width: 100%;
+    }
     header {
         padding: 20px;
     }
