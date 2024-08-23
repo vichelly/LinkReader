@@ -9,14 +9,14 @@
 </head>
 <body>
     <header>
-        <div class="wrapper">
+        <div class="container">
             <h1>Link Reader</h1>
             <p class="description">Insira uma URL e obtenha um resumo do conteúdo em poucos segundos.</p>
             <hr>
         </div>
     </header>
     <main>
-        <div class="wrapper">
+        <div class="container">
             <section class="form-section">
                 <form id="urlForm" action="{{ url_for('main_controller.scrape') }}" method="post" onsubmit="showLoading()">
                     <label for="url">Digite a URL do site:</label>
